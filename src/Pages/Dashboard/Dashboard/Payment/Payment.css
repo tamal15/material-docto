@@ -1,0 +1,27 @@
+.kash{
+    background-image: linear-gradient(rgb(216, 153, 126),#ad433c);
+    color:white;
+    /* background-color:darkseagreen; */
+    /* background-color:brown; */
+    margin-left: 30px;
+    font-weight: 700;
+    font-size:19px;
+    padding:10px 15px;
+    border-radius: 10px;
+    border: 2px solid white;
+
+}
+
+.nogod{
+    color:brown;
+}
+.bank{
+    background-color:ghostwhite;
+    padding:10px;
+}
+
+.mobiles{
+    margin-top: 60px;
+    background-color:cornsilk;
+    padding:8px;
+}

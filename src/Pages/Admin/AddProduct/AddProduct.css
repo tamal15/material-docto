@@ -1,0 +1,31 @@
+.submits form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.submits form input,textarea{
+    width:45%;
+   
+    padding:9px;
+    margin-bottom: 10px;
+}
+.pens{
+  background-color:paleturquoise;
+  border:lightcyan;
+}
+.sub{
+    background-color: #f7345e;
+    color:white;
+    border:lightgrey;
+    border-radius: 8px;
+}
+
+/* .submits{
+    background-color: #1f2833;
+    padding:80px;
+    padding-left: 10px;
+    padding-bottom: 60px;
+} */
