@@ -35,7 +35,7 @@ const SuccessBikash = () => {
                     history.push('/')
                 }
             })
-        // fetch(`http://localhost:5000/validate`,{
+        // fetch(`https://enigmatic-citadel-27942.herokuapp.com/validate`,{
         //     method:'POST',
         //     headers:{
         //         'content-type':'application.json'

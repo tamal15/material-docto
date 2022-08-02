@@ -1,0 +1,15 @@
+.footers{
+    
+        background-image: url('https://i.ibb.co/1X08Cf9/footer-bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+}
+
+.buttons{
+    background-color:#12D0D8;
+    border:cyan;
+    color:white;
+    padding:8px;
+    
+}

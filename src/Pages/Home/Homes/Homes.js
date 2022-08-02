@@ -4,6 +4,10 @@ import Services from '../Services/Services';
 import Appointment from '../Appointment/Appointment'
 import Banner from '../Banner/Banner';
 import OurDoctor from '../OurDoctor/OurDoctor';
+import Footer from '../../Shared/Footer/Footer';
+import { Box } from '@mui/material';
+import './Homes.css'
+import Contact from '../Contact/Contact';
 
 
 const Homes = () => {
@@ -12,10 +16,14 @@ const Homes = () => {
             
             <Navigation></Navigation>
             <Banner></Banner>
-            <Services></Services>
+           <Box className="start-bg">
+           <Services></Services>
            <Appointment></Appointment>
            <OurDoctor></OurDoctor>
+           <Contact></Contact>
+           <Footer></Footer>
             
+           </Box>
         </div>
     );
 };

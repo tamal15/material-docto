@@ -3,3 +3,13 @@
     padding-bottom: 280px;
    
 }
+.tools{
+    text-transform: uppercase;
+    border:2px solid aquamarine;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px;
+    /* padding-left: -10px; */
+    /* align-items: center; */
+    /* text-align: center; */
+}

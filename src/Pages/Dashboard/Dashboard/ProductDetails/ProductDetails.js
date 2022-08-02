@@ -8,7 +8,7 @@ const ProductDetails = () => {
     const [store , setStore]=useState({})
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/user/${id}`)
+        fetch(`https://enigmatic-citadel-27942.herokuapp.com/user/${id}`)
         .then(res=>res.json())
         .then(data=>setStore(data))
     },[])

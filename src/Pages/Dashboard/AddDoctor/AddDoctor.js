@@ -133,7 +133,7 @@ const AddDoctor = () => {
         component="img"
         style={{width:'150px', height:'140px', margin:'0 auto'}}
         height="140"
-        image='https://thumbs.dreamstime.com/b/beautiful-young-female-doctor-9182291.jpg'
+        image='https://images.freeimages.com/images/premium/previews/2155/21558344-portrait-of-positive-young-doctor-woman.jpg'
         alt="green iguana"
       />
       <CardContent>
@@ -171,7 +171,7 @@ const AddDoctor = () => {
         component="img"
         style={{width:'150px', height:'140px', margin:'0 auto'}}
         height="140"
-        image='https://thumbs.dreamstime.com/b/male-doctor-portrait-isolated-white-background-56744085.jpg'
+        image='https://i.ibb.co/FnJdgnf/doctor.png'
         alt="green iguana"
       />
       <CardContent>

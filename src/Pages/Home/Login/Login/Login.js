@@ -77,8 +77,8 @@ const Login = () => {
          <Alert severity="error">{authError}</Alert>
      }
 
-     <p>----------------------</p>
-     <Button onClick={handleGoogle} variant="contained">Google Sign In</Button>
+     {/* <p>----------------------</p>
+     <Button onClick={handleGoogle} variant="contained">Google Sign In</Button> */}
       </form>
    
   </Grid>
