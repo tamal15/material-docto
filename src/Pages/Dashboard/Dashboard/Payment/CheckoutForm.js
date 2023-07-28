@@ -17,7 +17,7 @@ const CheckoutForm = ({payment}) => {
   const [clientSecret, setClientSecret]=useState('');
 
   useEffect(()=>{
-    fetch('https://enigmatic-citadel-27942.herokuapp.com/create-payment-intent',{
+    fetch('http://localhost:5000/create-payment-intent',{
       method:'POST',
       headers:{
         'content-type': 'application/json'
@@ -86,7 +86,7 @@ const CheckoutForm = ({payment}) => {
         last4:paymentMethod.card.last4,
         transaction:paymentIntent.client_secret.slice('_secret')[0]
       }
-      fetch(`https://enigmatic-citadel-27942.herokuapp.com/appointments/${_id}`,{
+      fetch(`http://localhost:5000/appointments/${_id}`,{
         method:'PUT',
         headers:{
           'content-type':'application/json'

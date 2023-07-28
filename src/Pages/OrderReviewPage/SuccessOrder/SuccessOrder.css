@@ -1,0 +1,27 @@
+.paymentSuccessContainer {
+    /* background-image: url('./Img/success.gif'); */
+    background-color: black;
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    background-attachment: fixed;
+    padding: 15px;
+
+}
+.data-background{
+    background-image: url('https://img.freepik.com/premium-vector/congratulations-typography-lettering-handwritten-with-balloon-confetti-and-festive-elements_5773-129.jpg?w=2000');
+}
+
+.congratulation-card {
+    background-image: url('https://us.123rf.com/450wm/olejio/olejio2107/olejio210700004/171921835-blue-stage-podium-with-falling-down-colorful-confetti-on-light-background-winner-congratulations.jpg?ver=6');
+    /* padding: 10px;
+    text-align: center;
+    height: 500px;
+    box-shadow: "0px 14px 22px rgb(42 135 158 / 10%)";
+    background-color: white;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 30%;
+    display: flex;
+    justify-items: center; */
+    
+
+}

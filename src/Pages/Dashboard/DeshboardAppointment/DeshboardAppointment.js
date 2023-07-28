@@ -10,14 +10,18 @@ import Paper from '@mui/material/Paper';
 import { Link } from 'react-router-dom';
 
 const DeshboardAppointment = ({date}) => {
+  console.log(date)
     const {user}=useAuth()
     const [userAppointment,setUserAppointment]=useState([])
 
     useEffect(()=>{
-        const url=`https://enigmatic-citadel-27942.herokuapp.com/appointments?email=${user.email}&date=${date.toLocaleDateString()}`
+        const url=`http://localhost:5000/appointments?email=${user.email}&date=${date.toLocaleDateString()}`
         fetch(url)
         .then(res=>res.json())
-        .then(data=>setUserAppointment(data));
+        .then(data=>{
+          setUserAppointment(data)
+          console.log(data)
+        });
     },[date])
     return (
         <div>

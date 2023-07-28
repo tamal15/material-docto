@@ -16,10 +16,10 @@ const PatientAppointment = ({date}) => {
     // const {date,email}=patient;
 
     useEffect(()=>{
-        // fetch('https://enigmatic-citadel-27942.herokuapp.com/patient')
+        // fetch('http://localhost:5000/patient')
         // .then(res=>res.json())
         // .then(data=>setPatient(data))
-        const url=`https://enigmatic-citadel-27942.herokuapp.com/patient?date=${date.toLocaleDateString()}`
+        const url=`http://localhost:5000/patient?date=${date.toLocaleDateString()}`
         fetch(url)
         .then(res=>res.json())
         .then(data=>setPatient(data));
@@ -34,10 +34,11 @@ const PatientAppointment = ({date}) => {
                 <Table sx={{ }} aria-label="simple table">
                   <TableHead>
                     <TableRow>
+                      {/* <TableCell>Serial</TableCell> */}
                       <TableCell>Name</TableCell>
-                      <TableCell align="right">Time</TableCell>
-                      <TableCell align="right">Service</TableCell>
-                      <TableCell align="right">Date</TableCell>
+                      <TableCell align="">Time</TableCell>
+                      <TableCell align="">Email</TableCell>
+                      <TableCell align="">Date</TableCell>
                       {/* <TableCell align="right">Payment</TableCell> */}
                      
                     </TableRow>
@@ -48,12 +49,16 @@ const PatientAppointment = ({date}) => {
                         key={row._id}
                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                       >
+                        
+                        {/* <TableCell component="th" scope="row">
+                          {row.length}
+                        </TableCell> */}
                         <TableCell component="th" scope="row">
                           {row.patientName}
                         </TableCell>
-                        <TableCell align="right">{row.time}</TableCell>
-                        <TableCell align="right">{row.serViceName}</TableCell>
-                        <TableCell align="right">{row.date}</TableCell>
+                        <TableCell align="">{row.time}</TableCell>
+                        <TableCell align="">{row.email}</TableCell>
+                        <TableCell align="">{row.date}</TableCell>
                         {/* <TableCell align="right">{row.amount}</TableCell> */}
                         {/* {/* <TableCell align="right">{row.payment ? 'paid' :
                         <Link to={`dashboard/payment/${row._id}`}> <button>Pay</button></Link>}</TableCell> */}

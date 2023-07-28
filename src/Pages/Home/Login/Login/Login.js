@@ -4,6 +4,8 @@ import login from '../../../../images/login.png'
 import TextField from '@mui/material/TextField'
 import { NavLink, useHistory,useLocation} from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
+import Header from '../../Header/Header';
+import Footer from '../../../Shared/Footer/Footer';
 
 const Login = () => {
     const {registerUser,user,isLoading,authError,loginUser,signInGoogle}=useAuth()
@@ -20,7 +22,7 @@ const Login = () => {
     }
 
     const handleSubmit=e=>{
-       alert('submit')
+    //    alert('submit')
        loginUser(loginData.email, loginData.password,location,history)
         e.preventDefault()
     }
@@ -30,11 +32,14 @@ const Login = () => {
     }
     return (
       
-           <Container>
-                 <Grid container spacing={2}>
-  <Grid sx={{mt:8}} item xs={12} md={6}>
+         <div>
+            <Header></Header>
 
-  <Typography variant="body1" gutterBottom>
+            <Container>
+                 <Grid container spacing={2}>
+  <Grid sx={{mt:8,background:"honeydew"}} item xs={12} md={6}>
+
+  <Typography style={{fontWeight:"700",fontSize:"28px"}} variant="body1" gutterBottom>
          Login
       </Typography>
 
@@ -85,11 +90,15 @@ const Login = () => {
   <Grid item xs={12} md={6}>
   <img
            style={{width:'70%'}}
-            src={login} alt="" />
+            src="https://i.ibb.co/yhxXpcP/login.png" alt="" />
   </Grid>
  
 </Grid>
            </Container>
+
+
+            <Footer></Footer>
+         </div>
        
     );
 };

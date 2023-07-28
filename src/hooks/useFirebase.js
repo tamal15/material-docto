@@ -8,19 +8,26 @@ const useFirebase=()=>{
     const [isLoading,setIsLoading]=useState(true)
     const [authError,setAuthError]=useState('')
     const [admin,setAdmin]=useState(false)
+    const [doctor,setDoctor]=useState(false)
+    const [hospital,setHospital]=useState(false)
+    // const [user,setHospital]=useState(false)
     const [token,setToken]=useState('')
- 
+    const [toggle,setToggle]=useState(false)
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
-    const registerUser=(email,password,name,history)=>{
+    const handleClick=()=>{
+      setToggle(false)
+  }
+
+    const registerUser=(email,password,name,role,history)=>{
         setIsLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    const newUser={email,displayName:name}
+    const newUser={email,displayName:name,role}
     setUser(newUser)
     // save user to databse 
-    saveUserDatabase(email,name,'POST')
+    saveUserDatabase(email,name,role,'POST')
     // send name to firebase after creation 
     updateProfile(auth.currentUser, {
       displayName:name
@@ -92,13 +99,28 @@ const useFirebase=()=>{
 
     // databse admin value check 
     useEffect(()=>{
-     fetch(`https://enigmatic-citadel-27942.herokuapp.com/register/${user.email}`)
+     fetch(`http://localhost:5000/register/${user.email}`)
      .then(res=>res.json())
      .then(data=>setAdmin(data.admin))
     },[user.email])
 
+
+    useEffect(()=>{
+     fetch(`http://localhost:5000/registers/${user.email}`)
+     .then(res=>res.json())
+     .then(data=>setDoctor(data.doctor))
+    },[user.email])
+
+    useEffect(()=>{
+     fetch(`http://localhost:5000/registerss/${user.email}`)
+     .then(res=>res.json())
+     .then(data=>setHospital(data.hospital))
+    },[user.email])
+    
+
     const logout=()=>{
         setIsLoading(true)
+        setToggle(false)
         signOut(auth).then(() => {
             // Sign-out successful.
             
@@ -109,9 +131,9 @@ const useFirebase=()=>{
     }
 
     //  user registration information (store to the database )
-    const saveUserDatabase =(email,displayName,method) => {
-      const user={email,displayName}
-      fetch('https://enigmatic-citadel-27942.herokuapp.com/register', {
+    const saveUserDatabase =(email,displayName,role,method) => {
+      const user={email,displayName,role}
+      fetch('http://localhost:5000/register', {
         method:method,
         headers:{
           'content-type':'application/json'
@@ -125,12 +147,17 @@ const useFirebase=()=>{
     return{
         user,
         admin,
+        doctor,
+        hospital,
         token,
         logout,
         registerUser,
         loginUser,
+        toggle,
         authError,
         signInGoogle,
+        handleClick,
+        setToggle,
         isLoading
     }
 }

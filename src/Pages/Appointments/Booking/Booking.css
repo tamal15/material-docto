@@ -1,0 +1,36 @@
+.btn-style {
+    outline: none;
+    background-color: #1289A7;
+    border: 2px solid transparent;
+    color: white;
+    /* padding: 8px 20px; */
+    font-weight: 600;
+    transition: all .5s;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.backgroundDesig{
+    background-color: honeydew !important;
+}
+
+.btn-style.download-btn{
+    /* background-color: white; */
+    /* color: #1289A7; */
+    /* background-color: #2B5278; */
+    background-color: #1289A7;
+    /* border: 2px solid white; */
+    padding: 4px 15px !important;
+    color:white;
+    font-weight: 600 !important;
+    margin-right: 10px;
+}
+.detailshowss{
+    /* margin-top: 20px; */
+    text-decoration: none;
+    background-color:#1289A7 ;
+    color: white;
+    margin-top: 20px;
+    border-radius: 8px;
+    /* margin-top: 60px !important; */
+}

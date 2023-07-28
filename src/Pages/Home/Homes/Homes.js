@@ -8,18 +8,32 @@ import Footer from '../../Shared/Footer/Footer';
 import { Box } from '@mui/material';
 import './Homes.css'
 import Contact from '../Contact/Contact';
+import ServiceProvide from '../ServiceProvide/ServiceProvide';
+import Header from '../Header/Header';
+import DisplayShowMedicin from '../../Dashboard/DashboardHome/AdminDashboard/ShowMedicin/DisplayShowMedicin';
+import UpComming from '../UpCommingProduct/UpComming';
+import Bonus from './Bonus/Bonus';
+import ShowCommingMedicine from '../../Dashboard/Dashboard/MedicineUpComming/ShowCommingMedicine';
+
 
 
 const Homes = () => {
     return (
         <div>
             
-            <Navigation></Navigation>
-            <Banner></Banner>
+            {/* <Navigation></Navigation> */}
+            <Header></Header>
+            
            <Box className="start-bg">
-           <Services></Services>
+           <Banner></Banner>
+           <Bonus></Bonus>
+           {/* <Services></Services> */}
+           <ServiceProvide></ServiceProvide>
+           <DisplayShowMedicin></DisplayShowMedicin>
            <Appointment></Appointment>
+          
            <OurDoctor></OurDoctor>
+           <ShowCommingMedicine></ShowCommingMedicine>
            <Contact></Contact>
            <Footer></Footer>
             

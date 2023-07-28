@@ -6,7 +6,7 @@ const AppoinrmentToken = () => {
     const [token,setToken]=useState([])
 
     useEffect(()=>{
-        fetch('https://enigmatic-citadel-27942.herokuapp.com/init')
+        fetch('http://localhost:5000/init')
         .then(res=>res.json())
         .then(data=>{
             setToken(data)
@@ -32,7 +32,7 @@ const AppoinrmentToken = () => {
                                 {/* <img className="image-design" src={offers?.img} class="card-img-top" alt="..." /> */}
                                 <div class="card-body body-designs">
                                     <h3>{offers?.paymentStatus}</h3>
-                                    <p class="card-text">{offers?.description}.</p>
+                                    <p class="card-text">{offers?.total_amount}.</p>
                                     <h6 className="bg-danger text-white me-2 p-1 ">{offers?.status}</h6>
                                   
                                  

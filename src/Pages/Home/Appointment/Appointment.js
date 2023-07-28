@@ -12,6 +12,7 @@ const appointmentBg={
     background:`url(${bg})`,
     marginTop:150,
     backgroundColor:'rgba(45,58,74,0.9)',
+    // backgroundColor:'',
     backgroundBlendMode:'darken, luminosity'
 
   }

@@ -8,7 +8,7 @@ import './ProductPage.css'
 const ProductPage = () => {
     const [medicin, setMedicin] = useState([])
     useEffect(() => {
-        fetch('https://enigmatic-citadel-27942.herokuapp.com/user')
+        fetch('http://localhost:5000/user')
             .then(res => res.json())
             .then(data => setMedicin(data))
     }, [])

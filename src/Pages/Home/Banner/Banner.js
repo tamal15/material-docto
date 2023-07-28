@@ -52,10 +52,10 @@ const Banner = () => {
   <Grid item xs={12} md={6}>
   <Box>
        <Typography variant="h2" style={{ fontWeight:500}}>
-           Your New Smile Starts Here
+           24 Hours Service This Website
         </Typography>
         <Typography variant="h6" style={{ fontWeight:500, fontSize:15,color:'gray'}}>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, sint minima quaerat natus sapiente facere odio labore asperiores repellat animi.
+        A hospital is a healthcare institution providing patient treatment with specialized health science.
         </Typography>
         <Button variant='contained' style={{backgroundColor:"#5CE7ED"}}>Get Appointment</Button>
        </Box>
@@ -64,7 +64,7 @@ const Banner = () => {
     {/* <img style={{width:"100%"}} src={chair} alt="" /> */}
     <img
            style={{width:'300px',paddingLeft:"10px"}}
-            src={chair} alt="" />
+            src='https://revcycleintelligence.com/images/sized/hospital,_green-53edb5851454f1f8ce487b515aa1a1dd.jpg' alt="" />
   </Grid>
  
 </Grid>

@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     const handleForm= e =>{
        const user={email}
 
-       fetch('https://enigmatic-citadel-27942.herokuapp.com/register/admin',{
+       fetch('http://localhost:5000/register/admin',{
            method:'PUT',
            headers:{
                'authorization':`Bearer ${token}`,

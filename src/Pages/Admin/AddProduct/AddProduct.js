@@ -8,7 +8,7 @@ const AddProduct = () => {
     const onSubmit= (data) =>{
         console.log(data)
       
-        axios.post('https://enigmatic-citadel-27942.herokuapp.com/user',data)
+        axios.post('http://localhost:5000/user',data)
       .then(res=>{
         //   console.log(res)
            if(res.data.insertedId){

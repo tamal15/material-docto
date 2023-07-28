@@ -14,7 +14,7 @@ const Payment = () => {
     const {price,patientName,serViceName}=payment;
 
     useEffect(()=>{
-       fetch(`https://enigmatic-citadel-27942.herokuapp.com/appointments/${appointmentId}`)
+       fetch(`http://localhost:5000/appointments/${appointmentId}`)
        .then(res=>res.json())
        .then(data=>setPayment(data))
     },[appointmentId])
@@ -28,7 +28,7 @@ const Payment = () => {
 
      }
       console.log(order);
-      fetch(`https://enigmatic-citadel-27942.herokuapp.com/init`, {
+      fetch(`http://localhost:5000/init`, {
         method:'POST',
         headers:{
           'content-type':'application/json'
@@ -60,10 +60,10 @@ const Payment = () => {
 
 
         {/* bkash  */}
-        <div className='mobiles'>
+        {/* <div className='mobiles'>
           <h2>Payment For <span className='nogod'>Mobile</span> Banking: <span className='nogod'>Nogod</span> <span className='nogod'>Bikash</span> <span className='nogod'>Rocket</span></h2>
           <button onClick={purchage} className="kash">Pay Bikash</button>
-        </div>
+        </div> */}
        
 
 

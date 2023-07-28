@@ -12,7 +12,7 @@ const SuccessBikash = () => {
     const [product, setProduct] = useState([])
 
     useEffect(() => {
-        fetch(`https://enigmatic-citadel-27942.herokuapp.com/orders/${id}`)
+        fetch(`http://localhost:5000/orders/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -26,7 +26,7 @@ const SuccessBikash = () => {
             tran_id: id,
             val_id: product?.val_id
         }
-        axios.post(`https://enigmatic-citadel-27942.herokuapp.com/validate`, datas)
+        axios.post(`http://localhost:5000/validate`, datas)
             .then(res => {
                 console.log(res.data)
                 if (res.data) {
@@ -35,7 +35,7 @@ const SuccessBikash = () => {
                     history.push('/')
                 }
             })
-        // fetch(`https://enigmatic-citadel-27942.herokuapp.com/validate`,{
+        // fetch(`http://localhost:5000/validate`,{
         //     method:'POST',
         //     headers:{
         //         'content-type':'application.json'

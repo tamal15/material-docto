@@ -39,7 +39,7 @@ const BookingModal = ({open,handleClose,booking,date}) => {
         date:date.toLocaleDateString()
       }
       // console.log(appointments)
-      fetch('https://enigmatic-citadel-27942.herokuapp.com/appointments', {
+      fetch('http://localhost:5000/appointments', {
         method:'post',
         headers:{
           'content-type':'application/json'

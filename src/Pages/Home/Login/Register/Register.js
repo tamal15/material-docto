@@ -6,6 +6,8 @@ import login from '../../../../images/login.png'
 import TextField from '@mui/material/TextField'
 import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
+import Header from '../../Header/Header';
+import Footer from '../../../Shared/Footer/Footer';
 
 
 const Register = () => {
@@ -27,15 +29,18 @@ const Register = () => {
             alert('password did not matched')
             return;
         }
-        registerUser(loginData.email, loginData.password,loginData.name,history)
+        registerUser(loginData.email, loginData.password,loginData.name,loginData.role,history)
         e.preventDefault()
     }
     return (
-      <Container>
-            <Grid container spacing={2}>
-  <Grid sx={{mt:8}} item xs={12} md={6}>
+     <div>
+        <Header></Header>
 
-  <Typography variant="body1" gutterBottom>
+        <Container>
+            <Grid container spacing={2}>
+  <Grid sx={{mt:8,background:"honeydew"}} item xs={12} md={6}>
+
+  <Typography style={{fontWeight:"700",fontSize:"28px"}} variant="body1" gutterBottom>
          Register
       </Typography>
 
@@ -74,6 +79,18 @@ const Register = () => {
       onBlur={handleonBlur}
       name="password2"
       variant="standard" />
+
+      <TextField 
+      id="standard-basic" 
+      sx={{width:'75%',m:1}}
+      label="user/doctor/hospital" 
+      type="text"
+      onBlur={handleonBlur}
+      name="role"
+      variant="standard" />
+
+
+
       
      
       <Button type="submit"  sx={{width:'75%',m:1}} variant="contained">Register</Button>
@@ -96,12 +113,15 @@ const Register = () => {
   </Grid>
   <Grid item xs={12} md={6}>
   <img
-           style={{width:'70%'}}
-            src={login} alt="" />
+           style={{width:'80%'}}
+            src="https://i.ibb.co/3rsn1Bz/sign.png" alt="" />
   </Grid>
  
 </Grid>
       </Container>
+
+        <Footer></Footer>
+     </div>
     );
 };
 
